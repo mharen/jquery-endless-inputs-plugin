@@ -48,7 +48,12 @@ The following options can be provided like so (default values specified):
 		
 		// This is simply passed to jQuery's .clone() command. Set to true to also clone
 		// event handlers. More about what this means here: http://api.jquery.com/clone
-		CloneWithDataAndEvents: false
+		CloneWithDataAndEvents: false,
+		
+		// Set the max number of elements, including the initial element. e.g. if you set this to 5,
+		// and you already have 3 items in your container, the plugin will add at most 2 more
+		// Set maxElementCount <= 0 for unlimited cloning fun (default behavior)
+		maxElementCount: 0
 	});
 	  
 

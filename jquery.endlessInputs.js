@@ -40,33 +40,37 @@
 			var $container = $(this);			
 			
 			$container.bind('keyup change',function(){
-				var $lastItem = $container.find(settings.ElementToCloneSelector + ':last');
-				// we only need to do something if the lastItem has a non-empty input
-				if($lastItem.find(settings.DoCloneElementPredicate).size() > 0) {
-					$lastItem
-						.clone(settings.CloneWithDataAndEvents) // e.g. LI
-						.find(settings.ElementsToSkipSelector) 
-							.remove() // remove unwanted elements
-							.end() 
-						.appendTo($container) // attach to the end of the container (e.g. UL)
-						.find(settings.ElementsToClearOnCloneSelector) // clear out values
-							.each(function(i) {
-								// clear values, selections, and text elements (if included in ElementsToClearOnCloneSelector)
-								$(this)
-									.filter('textarea,input').val('').end() 
-									.filter('select').each(function() { this.selectedIndex = 0; }).end();
-							})
-							.end();
+				var $allItems = $container.find(settings.elementToCloneSelector);
+				if(settings.maxElementCount <= 0 || $allItems.size() < settings.maxElementCount){
+					var $lastItem = $allItems.filter(':last');
+					// we only need to do something if the lastItem has a non-empty input
+					if($lastItem.find(settings.doCloneElementPredicate).size() > 0) {
+						$lastItem
+							.clone(settings.cloneWithDataAndEvents) // e.g. LI
+							.find(settings.elementsToSkipSelector) 
+								.remove() // remove unwanted elements
+								.end() 
+							.appendTo($container) // attach to the end of the container (e.g. UL)
+							.find(settings.elementsToClearOnCloneSelector) // clear out values
+								.each(function(i) {
+									// clear values, selections, and text elements (if included in elementsToClearOnCloneSelector)
+									$(this)
+										.filter('textarea,input').val('').end() 
+										.filter('select').each(function() { this.selectedIndex = 0; }).end();
+								})
+								.end();
+					}
 				}
 			});
 		});
 	};
 
 	$.fn.endlessInputs.defaultOptions = {
-		ElementToCloneSelector: '.endlessItem',
-		DoCloneElementPredicate: 'input[value!=""],textarea[value!=""],select[selectedIndex!=0]',
-		ElementsToSkipSelector: '.endlessSkip',
-		ElementsToClearOnCloneSelector: 'textarea,input,select',
-		CloneWithDataAndEvents: false
+		elementToCloneSelector: '.endlessItem',
+		doCloneElementPredicate: 'input[value!=""],textarea[value!=""],select[selectedIndex!=0]',
+		elementsToSkipSelector: '.endlessSkip',
+		elementsToClearOnCloneSelector: 'textarea,input,select',
+		cloneWithDataAndEvents: false,
+		maxElementCount: 0
 	};
 })(jQuery);
