@@ -44,7 +44,7 @@
 				// we only need to do something if the lastItem has a non-empty input
 				if($lastItem.find(settings.DoCloneElementPredicate).size() > 0) {
 					$lastItem
-						.clone(settings.CloneWithEventHandlers) // e.g. LI
+						.clone(settings.CloneWithDataAndEvents) // e.g. LI
 						.find(settings.ElementsToSkipSelector) 
 							.remove() // remove unwanted elements
 							.end() 
@@ -67,6 +67,6 @@
 		DoCloneElementPredicate: 'input[value!=""],textarea[value!=""],select[selectedIndex!=0]',
 		ElementsToSkipSelector: '.endlessSkip',
 		ElementsToClearOnCloneSelector: 'textarea,input,select',
-		CloneWithEventHandlers: false
+		CloneWithDataAndEvents: false
 	};
 })(jQuery);
