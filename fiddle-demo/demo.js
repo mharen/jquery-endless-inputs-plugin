@@ -1,0 +1,3 @@
+﻿$(function(){
+  $('.endless').endlessInputs();
+});
