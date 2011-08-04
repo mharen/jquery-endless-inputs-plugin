@@ -2,10 +2,10 @@
 ---
 name: endlessInputs jQuery plugin demo
 description: A sample use of my endlessInputs jquery plugin
+normalize_css: no
+resources:
+  - https://raw.github.com/mharen/jquery-endless-inputs-plugin/master/jquery.endlessInputs.js
 authors:
   - Michael Haren
-resources:
-  - http://raw.github.com/mharen/jquery-endless-inputs-plugin/master/jquery.endlessInputs.js
-normalize_css: no
 ...
 */
