@@ -56,14 +56,16 @@ The following options can be provided like so (default values specified):
         maxElementCount: 0
     });
       
-##How do I access the value?
+##How do I access these dynamic inputs from the server?
 
 ### PHP
-If you give each `input` a `name` ending in brackets, `[]`, all the values will be submitted and PHP will turn turn them into an array. For example ([src](https://raw.github.com/mharen/jquery-endless-inputs-plugin/master/demo.php)):
+If you give each `input` a `name` ending in brackets, `[]`, all the values will be submitted and 
+PHP will turn turn them into an array. For example, consider this 
+form ([src](https://raw.github.com/mharen/jquery-endless-inputs-plugin/master/demo.php)):
 
-![enter data](https://github.com/mharen/jquery-endless-inputs-plugin/raw/master/php-example-submit.png)
+> ![enter data](https://github.com/mharen/jquery-endless-inputs-plugin/raw/master/php-example-submit.png)
 
-And when submitted, PHP sees this:
+When submitted, PHP sees this:
 
     Array
     (
@@ -90,8 +92,17 @@ And when submitted, PHP sees this:
                 [2] => hi!
                 [3] => 
             )
-
     )
+
+### ASP.NET
+TODO (for shame!)
+
+##How do I prepopulate values to the screen from the server?
+### PHP
+TODO (for shame!)
+
+### ASP.NET
+TODO (for shame!)
 
 ##Whats next?
 
