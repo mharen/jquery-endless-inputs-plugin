@@ -32,23 +32,23 @@ The following options can be provided like so (default values specified):
     $('.yourSelector').endlessInputs({
 		// this is the inner element, within '.yourSelector' that will be cloned and
 		// appended to '.yourSelector'. If '.yourSelector' is a table, this should be a row
-		ElementToCloneSelector: '.endlessItem',
+		elementToCloneSelector: '.endlessItem',
 		
 		// this selector is applied to the last item matched by 'ElementToCloneSelector'. 
 		// If anything matches, it is cloned
-		DoCloneElementPredicate: 'input[value!=""],textarea[value!=""],select[selectedIndex!=0]',
+		doCloneElementPredicate: 'input[value!=""],textarea[value!=""],select[selectedIndex!=0]',
 		
 		// Anything with this class will be removed from the newly cloned element before it is 
 		// appended to '.yourSelector'
-		ElementsToSkipSelector: '.endlessSkip',
+		elementsToSkipSelector: '.endlessSkip',
 		
 		// These are the elements to clear out before the newly cloned element is 
 		// appended to '.yourSelector'
-		ElementsToClearOnCloneSelector: 'textarea,input,select',
+		elementsToClearOnCloneSelector: 'textarea,input,select',
 		
 		// This is simply passed to jQuery's .clone() command. Set to true to also clone
 		// event handlers. More about what this means here: http://api.jquery.com/clone
-		CloneWithDataAndEvents: false,
+		cloneWithDataAndEvents: false,
 		
 		// Set the max number of elements, including the initial element. e.g. if you set this to 5,
 		// and you already have 3 items in your container, the plugin will add at most 2 more
