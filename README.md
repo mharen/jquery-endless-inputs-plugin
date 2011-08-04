@@ -2,6 +2,8 @@
 ##What?
 This plugin gives you an endless stream of automatically appearing inputs.
 
+[DEMO!](http://jsfiddle.net/gh/get/jquery/1.6/mharen/jquery-endless-inputs-plugin/tree/master/fiddle-demo/) (Hint: enter stuff in the boxes.)
+
 ##How?
 Suppose you have this markup:
 
@@ -13,7 +15,7 @@ And this call to the plugin:
 
     $('.endless').endlessInputs();
 
-The plugin will clone that `<li>` element each time something is entered into its `<input/>`. Check out `demo.html` for a slightly more complex example.
+The plugin will clone that `<li>` element each time something is entered into its `<input/>`. Check out `demo.html` or [this fiddle](http://jsfiddle.net/gh/get/jquery/1.6/mharen/jquery-endless-inputs-plugin/tree/master/fiddle-demo/) for a slightly more complex example.
 
 ##Note!
 This plugin allows you to keep on chaining, so, for example:
