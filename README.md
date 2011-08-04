@@ -1,25 +1,19 @@
-#jQuery Plugin Skeleton
+#jQuery Endless Inputs Plugin
 ##What?
-Simple, it's just a skeleton of a jQuery plugin that you can download, clone, fork, whatever. I'm putting it on Github mainly for myself. It also includes an MIT license at the top of the skeleton.
+This plugin gives you an endless stream of automatically appearing inputs.
 
 ##How?
-Only thing you really have to do is edit the MIT license on the first line:
+Suppose you have this markup:
 
-    Copyright (c) <Year> <First & Last Name>, <Your Web Site>
+    <ul class='endless-input-container'>
+	  <li class='endless-input-item'><input/></li>
+	</ul>
 
-And then name your plugin by replacing "`pluginname`" here:
+And this call to the plugin:
 
-    $.fn.pluginname = function(options) {
+    $('.endless-input-container').endlessInputs();
 
-Lastly, you basically just start writing you plugin right under this line:
-
-    $this = $(this);
-
-Make sure to use `$this` to reference the element selected from the plugin. Example, `$this` in this in this case:
-
-    $('#myelement').pluginname();
-
-Would equal `#myelement`, or for multiple items selected, the current item the plugin is on while looping through.
+The plugin will clone that `<li>` element each time something is entered into its `<input/>`.
 
 ##Note!
 This plugin allows you to keep on chaining, so, for example:
@@ -30,10 +24,10 @@ Would run `pluginname` name on `#myelement` then add a blue border to it after.
 
 ##Whats next?
 
-A skeleton that includes ready-to-go functions and callbacks for AJAX based plugins.
+The world!
 
 ##Found a bug? 
 
-Submit a bug report above or here: 
+Submit a bug report above or [here](https://github.com/mharen/jquery-endless-inputs-plugin/issues)
 
-<https://github.com/OscarGodson/jQuery-Plugin-Skeleton/issues>
+Or find ping me on [Twitter](http://www.twitter.com/mharen) or on my [blog](http://blog.wassupy.com)

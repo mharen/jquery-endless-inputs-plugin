@@ -1,5 +1,7 @@
 /*
-	Copyright (c) <Year> <First & Last Name>, <Your Web Site>
+	Copyright (c) 2011 Michael Haren, mharen@gmail.com
+	Twitter @mharen
+	Web http://blog.wassupy.com
 	
 	Permission is hereby granted, free of charge, to any person obtaining
 	a copy of this software and associated documentation files (the
@@ -21,14 +23,14 @@
 	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 ;(function($){
-	$.fn.pluginname = function(options) {
-		var settings = $.extend({}, $.fn.pluginname.defaultOptions, options);
+	$.fn.endlessInputs = function(options) {
+		var settings = $.extend({}, $.fn.endlessInputs.defaultOptions, options);
 
 		return this.each(function() {
 			var $this = $(this);
 		});
 	};
 
-	$.fn.pluginname.defaultOptions = {
+	$.fn.endlessInputs.defaultOptions = {
 	};
 })(jQuery);
